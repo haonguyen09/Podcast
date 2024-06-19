@@ -1,0 +1,36 @@
+@use '../abstracts' as abs;
+
+
+.width-full {
+    width: 100%;
+}
+
+.color-gray {
+    color: abs.$text-gray !important;
+}
+
+.heading {
+    --mb: 0;
+    @include abs.fs('lg');
+    line-height: 1.5;
+    color: abs.$text-black1;
+    @include abs.fw('semibold');
+    margin-bottom: var(--mb);
+}
+
+.view {
+    font-size: 13px;
+    @include abs.fw('medium');
+    line-height: 18px;
+    color: abs.$gray-2;
+}
+
+.margin-block-30 {
+    margin: 30px 0 !important;
+}
+
+.layer {
+    border-radius: 10px;
+    opacity: 0.74;
+    background-color: abs.$text-black1;
+}

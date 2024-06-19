@@ -1,0 +1,19 @@
+@use "../../abstracts" as abs;
+
+.feed {
+
+    &-tab {
+        border-bottom: 1px solid abs.$bg-3;
+        &-item {
+            border: none;
+            color: abs.$gray-1;
+        }
+    }
+
+    &-toggle {
+        p {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+}

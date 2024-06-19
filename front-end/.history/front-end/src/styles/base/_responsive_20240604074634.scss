@@ -1,0 +1,28 @@
+@use '../abstracts' as abs;
+
+
+@include abs.screenMaxWidth(768px) {
+    .trending-circle  {
+        right: 15px;
+    }
+
+    .signUp-s2-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+}
+
+@include abs.screenMaxWidth(1279.8px) {
+    .main-container {
+        padding: 24px;
+    }
+
+    .home-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}

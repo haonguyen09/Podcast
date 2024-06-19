@@ -1,0 +1,12 @@
+@use '../../abstracts' as abs;
+
+.signUp {
+
+    &-s2 {
+
+        &-search {
+            width: 660px;
+            padding: 12px 20px;
+        }
+    }
+}

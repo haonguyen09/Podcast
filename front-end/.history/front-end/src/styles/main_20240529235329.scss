@@ -1,0 +1,34 @@
+
+//vendor
+@use "./vendor/react-bootstrap";
+@use "./vendor/react-slick";
+
+//base
+@use "./base/reset";
+@use "./base/general";
+@use "./base/typography";
+
+
+//components
+@use "./components/navbarComponent";
+@use './components/button';
+@use './components/toggle';
+@use './components/waveForm';
+@use './components/podcastItemComponent';
+
+//layout
+@use "./layout/header";
+@use "./layout/sidebar";
+@use "./layout/structure";
+@use "./layout/footer";
+
+//pages
+@use "./pages/HomePage";
+@use "./pages/TrendingPage";
+@use "./pages/ExploreTopicPage";
+
+
+//themes
+
+//responsive
+@use "./base/responsive";

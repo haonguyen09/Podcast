@@ -1,0 +1,11 @@
+@mixin size($width: 0px, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin imgCover($radius: 0) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $radius;
+}

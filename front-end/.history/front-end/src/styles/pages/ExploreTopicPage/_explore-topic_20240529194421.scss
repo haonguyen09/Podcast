@@ -1,0 +1,9 @@
+@use '../../abstracts' as abs;
+
+.explore {
+    &-heading {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+}

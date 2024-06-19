@@ -1,0 +1,10 @@
+@use '../../abstracts' as abs;
+
+.explore {
+    &-heading {
+        @include abs.fs(24px);
+        @include abs.fw('semibold');
+        line-height: 26px;
+        --mb: 14px;
+    }
+}

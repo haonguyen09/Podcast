@@ -1,0 +1,28 @@
+@use '../../abstracts' as abs;
+
+.exploreItem {
+
+    &-main {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+        gap: 60px 20px;
+    }
+
+    &-header {
+        margin-block: 28px 20px;
+
+        span {
+            @include abs.styleText();
+            display: block;
+        }
+    }
+
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 6px;
+    }
+
+
+}

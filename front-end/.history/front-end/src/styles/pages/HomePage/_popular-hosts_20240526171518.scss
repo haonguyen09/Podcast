@@ -1,0 +1,13 @@
+@use '../../abstracts' as abs;
+
+.host {
+    &-heading {
+        @include abs.fs('lg');
+        color: abs.$text-black1;
+        margin-bottom: 20px;
+        @include abs.fw('semibold');
+    }
+
+
+}
+

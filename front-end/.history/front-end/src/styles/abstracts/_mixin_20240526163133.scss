@@ -1,0 +1,39 @@
+@mixin size($width: 0px, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin imgRounded($radius: 0) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $radius;
+}
+
+@mixin fw($value) {
+    @if $value == 'medium' {
+        font-weight: 500 !important;
+    }
+
+    @if $value == 'semibold' {
+        font-weight: 600 !important;
+    }
+
+    @if $value == 'bold' {
+        font-weight: 700 !important;
+    }
+
+    @mixin fs($value) {
+        @if $value == 'small' {
+            font-size: 14px !important;
+        }
+    
+        @if $value == 'normal' {
+            font-size: 15px !important;
+        }
+    
+        @if $value == 'large' {
+            font-size: 16px !important;
+        }
+
+}

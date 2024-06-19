@@ -1,0 +1,19 @@
+.waveform-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-right: 40px;
+  }
+  
+  .waveform {
+    width: 90px; /* Set the width of the waveform */
+    height: 20px; /* You can adjust the height as needed */
+
+    .canvases canvas {
+        height: 20px !important;
+    }
+}
+
+.play-pause-btn {
+    background-color: #fff;
+}

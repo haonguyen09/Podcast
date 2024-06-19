@@ -1,0 +1,6 @@
+@use '../abstracts' as abs;
+
+.sidebar {
+    background-color: abs.$white-color;
+    padding: 48px 30px 0;
+}

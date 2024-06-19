@@ -1,0 +1,7 @@
+@use '../abstracts' as abs;
+
+@include screenMaxWidth(1279.8px) {
+    .main-container {
+        
+    }
+}

@@ -1,0 +1,222 @@
+const Podcast = require('../model/PodcastModel');
+const Topic = require('../model/TopicModel');
+
+const { default: mongoose } = require('mongoose');
+
+const createPodcast = (newPodcast, files) => {
+    return new Promise(async (resolve, reject) => {
+        if (!newPodcast) {
+            return reject(new TypeError("New podcast data is required"));
+        }
+        if (newPodcast) {
+            const { title, description, status, topicId } = newPodcast
+            let imagePath, audioPath
+
+            const existingPodcast = await Podcast.findOne({ title })
+            if (existingPodcast) {
+                return reject({
+                    status: "ERR",
+                    message: "Title already exists!"
+                })
+            } 
+            console.log("filesService", files)
+            try {
+                if (files.image && files.image[0]) {
+                    imagePath = files.image[0].filename
+                }
+                if (files.audio && files.audio[0]) {
+                    audioPath = files.audio[0].filename
+                }
+                const response = await Podcast.create({
+                    title,
+                    description,
+                    status,
+                    topicId,
+                    image: imagePath,
+                    audio: audioPath
+                })
+                console.log("response", response)
+                if (response) {
+                    const updateTopic = await Topic.findByIdAndUpdate(topicId, { podcasts: response._id, totalPodcast: +1})
+                    console.log("updateTopic", updateTopic)
+                    resolve({
+                        status: "OK",
+                        message: "Create podcast successful",
+                        data: response
+                    })
+                }
+            } catch (error) {
+                reject({
+                    status: "ERR",
+                    message: "Create podcast failed!",
+                    error: error
+                })
+            }
+        }
+    })
+}
+
+
+const updatePodcast = (id, data, files) => {
+    return new Promise(async (resolve, reject) => {
+
+        const podcastId = new mongoose.Types.ObjectId(id);
+
+        try {
+            const existingPodcast = await Podcast.findById(podcastId);
+
+            if (!existingPodcast) {
+                return reject({
+                    status: "ERR",
+                    message: "Podcast not found!"
+                });
+            } 
+
+            let imagePath = existingPodcast.image
+            if (files && files.image && files.image[0]) {
+                imagePath = files.image[0].originalname
+            }
+
+            let audioPath = existingPodcast.audio
+            if (files && files.audio && files.audio[0]) {
+                audioPath = files.audio[0].originalname
+            }
+
+            const updateFields = {
+                ...data,
+                image: imagePath,
+                audio: audioPath
+            };
+
+            const response = await Podcast.findByIdAndUpdate(podcastId, updateFields, { new: true });
+
+            if (response) {
+                resolve({
+                    status: "OK",
+                    message: "Update podcast successful",
+                    data: response
+                });
+
+            } else {
+                reject({
+                    status: "ERR",
+                    message: "Podcast not found!"
+                });
+            }
+        } catch (error) {
+            reject({
+                status: "ERR",
+                message: "Update podcast failed!",
+                error: error
+            });
+        }
+    });
+};
+
+
+const getDetailsPodcast  = (id) => {
+    return new Promise( async (resolve, reject) => {
+
+        const podcastId = new mongoose.Types.ObjectId(id)
+
+        const existingPodcast = await Podcast.findOne({
+            _id:podcastId
+        })
+        if (!existingPodcast) {
+            reject({
+                status: 'ERR',
+                message: 'The podcast not found!'
+            })
+        }
+
+        try {
+            const response = await Podcast.findById(podcastId)
+            if (response) {
+                resolve({
+                    status: "OK",
+                    message: "Get details successful!",
+                    data: response
+                })
+            }
+        } catch (error) {
+            reject({
+                status: "ERR",
+                message: "Get details failed!",
+                error: error
+            })
+        }
+    })
+}
+
+const deletePodcast = (id) => {
+    return new Promise( async (resolve, reject) => {
+
+        const podcastId = new mongoose.Types.ObjectId(id)
+
+        const existingPodcast = await Podcast.findOne({
+            _id:podcastId
+        })
+        if (!existingPodcast) {
+            reject({
+                status: 'ERR',
+                message: 'The podcast not found!'
+            })
+        }
+
+        try {
+            const response = await Podcast.findByIdAndDelete(podcastId)
+            if (response) {
+                resolve({
+                    status: "OK",
+                    message: "Delete podcast successful"
+                })
+            }
+        } catch (error) {
+            reject({
+                status: "ERR",
+                message: "delete podcast failed!",
+                error: error
+            })
+        }
+    })
+}
+
+
+const getAllPodcast = async (limit = 4, page = 0, filter) => {
+        try {
+            const totalPodcast = await Podcast.countDocuments()
+            const queryConditions = {}
+            if (filter) {
+                queryConditions[filter[0]] = { '$regex': filter[1], '$options': 'i' };
+            }
+            const response = await Podcast.find(queryConditions).limit(limit).skip(limit * page)
+                                        .populate({ path: "userId" })
+                                        .populate({ path: "topicId" })
+                                        .populate({ path: "comments" })
+            if (response) {
+                return{
+                    status: "OK",
+                    message: "Get all podcast successful",
+                    data: response,
+                    totals: totalPodcast,
+                    page: Number(page) + 1,
+                    totalPage: Math.ceil(totalPodcast / limit)
+                }
+            }
+        } catch (e) {
+            return({
+                status: "ERR",
+                message: "get all podcast failed!",
+                error: e
+            })
+        }
+}
+
+
+module.exports = {
+    createPodcast,
+    updatePodcast,
+    getDetailsPodcast,
+    deletePodcast,
+    getAllPodcast
+}

@@ -1,0 +1,10 @@
+@use '../abstracts' as abs;
+
+
+.width-full {
+    width: 100%;
+}
+
+.color-gray {
+    color: abs.$text-gray !important;
+}

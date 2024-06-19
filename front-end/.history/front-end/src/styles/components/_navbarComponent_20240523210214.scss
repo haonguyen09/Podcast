@@ -1,0 +1,10 @@
+@use '../abstracts' as abs;
+
+.menu {
+    &-link {
+        gap: 10px;
+        color: abs.$text-gray;
+        font-size: 14px;
+        line-height: 143%;
+    }
+}

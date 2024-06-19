@@ -1,0 +1,105 @@
+@use "../../abstracts" as abs;
+
+.feed {
+
+    &-tab {
+        &-item {
+            
+            &-link {
+                border: none !important;
+                border-bottom: 2px solid abs.$bg-3 !important;
+                color: abs.$gray-1 !important;
+                @include abs.fs('sm');
+                @include abs.fw('bold');
+                line-height: 20px;
+
+                &.active {
+                    border-bottom: 2px solid abs.$primary-color !important;
+                    color: abs.$primary-color !important;
+                    transition: all 0.3s linear;
+                }
+            }
+
+
+        }
+
+    }
+
+    &-toggle {
+
+        border-bottom: 2px solid abs.$natural-2 !important;
+        padding: 8px 0px 4px 10px;
+        p {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+
+    &-main {
+        margin-top: 40px;
+    }
+
+    &-item {
+        border-radius: 10px;
+        border: 1px solid abs.$natural-2;
+
+        &-header {
+            padding: 20px;
+        }
+    }
+
+    &-author {
+        gap: 16px;
+
+        &-verify {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        &-avatar {
+            @include abs.size(48px);
+            flex: 0 0 48px;
+            position: relative;
+
+            img{
+                @include abs.imgRounded(100rem)
+            }
+        }
+
+        &-name {
+            color: abs.$text-black1;
+            @include abs.fs('sm');
+            line-height: 20px;
+            margin: 0;
+            margin-right: 2px;
+        }
+
+        &-rating {
+            span {
+                color: abs.$gray-2;
+                @include abs.fs('sm');
+                line-height: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &-date {
+        @include abs.fw(400);
+        @include abs.fs('sm');
+        color: abs.$gray-2;
+    }
+
+    &-podcast {
+        &-img {
+            @include abs.size(152px, 158px);
+            flex-shrink: 0;
+
+            img {
+                @include abs.imgRounded(10px);
+            }
+        }
+    }
+}

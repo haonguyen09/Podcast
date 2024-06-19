@@ -1,0 +1,7 @@
+@use '../abstracts' as abs;
+
+.podcastItem {
+    &-pause, &-play {
+        @include abs.size(46px)
+    } 
+}

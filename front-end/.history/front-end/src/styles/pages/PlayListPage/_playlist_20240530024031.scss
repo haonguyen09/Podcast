@@ -1,0 +1,23 @@
+@use '../../abstracts' as abs;
+
+.playlist {
+    &-heading {
+        @include abs.fs(24px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 14px;
+    }
+
+    &-header {
+        span {
+            @include abs.styleText();
+            margin-bottom: 20px;
+        }
+    }
+
+    &-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}

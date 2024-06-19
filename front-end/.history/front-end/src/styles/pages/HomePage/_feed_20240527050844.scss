@@ -1,0 +1,11 @@
+@use "../../abstracts" as abs;
+
+.feed {
+
+    &-toggle {
+        p {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+}

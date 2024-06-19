@@ -1,0 +1,10 @@
+.topPodcast {
+    &-header {
+        margin-bottom: 18px;
+    }
+
+    &-main {
+        grid-template-rows: minmax(0, 2);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

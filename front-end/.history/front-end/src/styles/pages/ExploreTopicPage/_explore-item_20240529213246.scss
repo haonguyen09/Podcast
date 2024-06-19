@@ -1,0 +1,26 @@
+@use '../../abstracts' as abs;
+
+.explore {
+
+    &-wrapper {
+        container-type: inline-size;
+        container-name: explore;
+    }
+
+    &-heading {
+        @include abs.fs(24px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 14px;
+    }
+
+    &-header {
+        span {
+            @include abs.styleText();
+            margin-bottom: 38px;
+            display: block;
+        }
+    }
+
+}

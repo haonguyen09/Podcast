@@ -1,0 +1,12 @@
+@use '../../abstracts' as abs;
+
+.sortP {
+
+    &-heading {
+        line-height: 24px;
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        --mb: 20px;
+    }
+}

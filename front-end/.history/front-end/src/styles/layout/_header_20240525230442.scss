@@ -1,0 +1,30 @@
+@use '../abstracts' as abs;
+
+.search {
+    flex: 0 1 360px;
+}
+
+.header-right {
+    gap: 24px;
+
+    & > * {
+        flex-shrink: 0;
+    }
+}
+
+.profile {
+    display: block;
+    @include abs.size(48px);
+    
+    img {
+        @include abs.imgRounded(100rem);
+    }
+}
+
+.button-upload {
+    height: 48px;
+    padding: 0 16px;
+    gap: 6px;
+    background-color: abs.$primary-color;
+    color: abs.$gray-neutral1;
+}

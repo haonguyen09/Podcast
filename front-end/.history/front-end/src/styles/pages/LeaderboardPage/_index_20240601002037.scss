@@ -1,0 +1,23 @@
+
+@use '../../abstracts' as abs;
+
+.leader {
+
+    &-header {
+        margin-bottom: 40px;
+    }
+
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+    }
+
+    &-img {
+        @include abs.size(40px);
+        border-radius: 100rem;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+}

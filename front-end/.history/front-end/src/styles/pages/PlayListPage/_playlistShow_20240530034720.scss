@@ -1,0 +1,14 @@
+@use '../../abstracts' as abs;
+
+.playlistShow {
+    &-item {
+        padding: 20px 22px;
+
+        img {
+            @include abs.size(213px, 245px);
+            flex-shrink: 0;
+            border-radius: 12px;
+            margin-right: 20px;
+        }
+    }
+}

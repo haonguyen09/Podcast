@@ -1,0 +1,11 @@
+@use '../abstracts' as abs;
+
+.toggle {
+    @include abs.size(30px, 17px);
+    border-radius: 100rem;
+    background-color: abs.$gray-2;
+    padding: 1.5px 2px;
+
+    &-spinner {
+    }
+}

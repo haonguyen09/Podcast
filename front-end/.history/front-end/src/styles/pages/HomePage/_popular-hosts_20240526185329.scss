@@ -1,0 +1,33 @@
+@use '../../abstracts' as abs;
+
+.host {
+    &-heading {
+        @include abs.fs('lg');
+        color: abs.$text-black1;
+        margin-bottom: 20px;
+        @include abs.fw('semibold');
+    }
+
+    &-avatar {
+        @include abs.size(64px);
+        @include abs.imgRounded(100rem);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid abs.$orange-color;
+        box-shadow: 0 0 0 2px abs.$white-color, 0 0 0 3px abs.$orange-color;
+
+        img {
+            position: relative;
+            z-index: 2;
+            background-color: abs.$orange-color;
+
+        }
+    }
+
+    &-name {
+        @include abs.fs('sm');
+        line-height: 20px;
+        color: abs.$gray-1;
+    }
+}
+

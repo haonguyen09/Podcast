@@ -1,0 +1,27 @@
+@use '../../abstracts' as abs;
+
+.suggest-follow {
+
+    &-header {
+        margin-block: 43px 18px;
+    }
+
+    &-author {
+        img {
+            flex: 0 0 46px;
+            height: 46px;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            border: 1px solid abs.$secondary-white;
+            box-shadow: 0 0 0 2px abs.$white-color, 0 0 0 3px abs.$secondary-white;
+        }
+
+        &-info {
+            h3{
+                font-size: 15px;
+                @include abs.fw('medium');
+                line-height: 22px;
+            }
+        }
+    }
+}

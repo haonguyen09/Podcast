@@ -1,0 +1,37 @@
+@use '../../abstracts' as abs;
+
+.topics {
+    &-header {
+        margin-block: 43px 18px;
+    }
+
+    &-img {
+        position: relative;
+        @include abs.size(155px, 86px);
+        flex-shrink: 0;
+        border-radius: 10px;
+        opacity: 0.74;
+        background-color: abs.$text-black1;
+    }
+
+    &-info {
+        position: absolute;
+        left: 5%;
+        bottom: 5%;
+
+        span {
+            @include abs.fs(13px);
+            line-height: 19px;
+            color: abs.$white-color;
+        }
+    }
+
+    &-name {
+        span {
+            @include abs.fs('sm');
+            @include abs.fw('medium');
+            line-height: 20px;
+            color: abs.$white-color;
+        }
+    }
+}

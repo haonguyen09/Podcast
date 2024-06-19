@@ -1,0 +1,63 @@
+@use '../../abstracts' as abs;
+
+.explore {
+    &-heading {
+        @include abs.fs(24px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 14px;
+    }
+
+    &-header {
+        span {
+            @include abs.styleText();
+            margin-bottom: 38px;
+            display: block;
+        }
+    }
+
+    &-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 36px;
+    }
+
+    &-item {
+        position: relative;
+        flex-shrink: 0;
+        @include abs.size(240px, 86px);
+        border-radius: 10px;
+    }
+    &-img {
+        @include abs.imgRounded(10px)
+    }
+
+    &-info {
+
+        position: absolute;
+        left: 5%;
+        bottom: 5%;
+        z-index: 1;
+
+        span {
+            @include abs.styleText();
+        }
+    }
+
+    &-title {
+
+        img {
+            width: 20px;
+            aspect-ratio: 1;
+            flex-shrink: 0
+        }
+
+        h4{
+            @include abs.fs('nm');
+            @include abs.fw('semibold');
+            color: abs.$white-color;
+            line-height: 22px;
+            margin: 0;
+        }
+    }
+}

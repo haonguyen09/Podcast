@@ -1,0 +1,30 @@
+@use '../../abstracts' as abs;
+
+.signUp {
+    grid-template-columns: repeat(2, 1fr);
+
+    &-text {
+        @include abs.styleHeading($fz: 16px, $fw: 500, $lh: 24px, $color:abs.$gray-3);
+        display: block;
+        margin-block: 20px 16px;
+    }
+
+    &-listImg {
+        img {
+            @include abs.size(40px);
+            border-radius: 100rem;
+            margin-left: -12px;
+            background-color: abs.$pink-color2;
+            border: 2px solid abs.$white-color;
+        }
+        margin-block: 20px;
+    }
+
+    h3 {
+        @include abs.styleHeading($fz: 24px);
+    }
+
+    &-separate {
+        @include abs.styleText();
+    }
+}

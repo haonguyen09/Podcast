@@ -1,0 +1,27 @@
+@use '../../abstracts' as abs;
+
+.host {
+    &-heading {
+        @include abs.fs('lg');
+        color: abs.$text-black1;
+        margin-bottom: 20px;
+        @include abs.fw('semibold');
+    }
+
+    &-avatar {
+        @include abs.size(70px);
+        @include abs.imgRounded(100rem);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid abs.$orange-color;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: abs.$white-color;
+            @include abs.size(64px)
+        }
+    }
+}
+

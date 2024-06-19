@@ -1,0 +1,48 @@
+@use '../../abstracts' as abs;
+
+.createEpisodes {
+
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+
+    &-thumbnail {
+
+        h4 {
+            @include abs.styleHeading($fz: 18px, $mb: 20px);
+        }
+    }
+
+    &-wrapper {
+        input {
+            display: none;
+        }
+    }
+
+    &-upload {
+        &-label {
+            @include abs.size(558px, 125px);
+            border-radius: 10px;
+            border: 1px solid #F4F4F4;
+            background: abs.$natural-1;
+            box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.25) inset;
+
+            h4 {
+                @include abs.styleHeading($fz: 13px, $fw: 500, $lh: 18px, $mb: 5px);
+            }
+
+            span {
+                @include abs.styleText();
+                @include abs.fs(12px);
+                
+            }
+        }
+
+
+    }
+
+}

@@ -1,0 +1,21 @@
+@use '../../abstracts' as abs;
+
+
+.trendingE {
+
+    &-header {
+        margin-block: 42px;
+
+        span {
+            @include abs.styleText();
+        }
+    }
+
+    &-heading {
+        @include abs.fs(18px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 8px;
+    }
+}

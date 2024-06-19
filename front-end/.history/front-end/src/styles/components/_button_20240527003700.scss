@@ -1,0 +1,13 @@
+@use '../abstracts' as abs;
+
+.button {
+    --gap: 10px;
+    --fw: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    border-radius: 8px;
+    font-weight: var(--fw);
+    @include abs.fs('nm');
+}

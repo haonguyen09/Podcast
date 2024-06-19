@@ -1,0 +1,16 @@
+@use '../../abstracts' as abs;
+
+.topics {
+    &-header {
+        margin-block: 43px 18px;
+    }
+
+    &-img {
+        position: relative;
+        @include abs.size(155px, 86px);
+        flex-shrink: 0;
+        border-radius: 10px;
+        opacity: 0.74;
+        background-color: abs.$text-black1;
+    }
+}

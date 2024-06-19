@@ -1,0 +1,22 @@
+
+//vendor
+@use "./vendor/react-bootstrap";
+
+//base
+@use "./base/reset";
+@use "./base/general";
+@use "./base/typography";
+
+//components
+@use "./components/navbarComponent";
+
+//layout
+@use "./layout/header";
+@use "./layout/sidebar";
+@use "./layout/structure";
+@use "./layout/footer";
+
+//pages
+@use "./pages/HomePage"
+
+//themes

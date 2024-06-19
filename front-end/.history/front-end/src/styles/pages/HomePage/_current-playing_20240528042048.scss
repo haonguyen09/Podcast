@@ -1,0 +1,7 @@
+@use '../../abstracts' as abs;
+
+.current-play {
+    &-header {
+        margin-block: 30px 20px;
+    }
+}

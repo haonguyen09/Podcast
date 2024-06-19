@@ -1,0 +1,9 @@
+@use '../abstracts' as abs;
+
+@include abs.screenMaxWidth(1279.8px) {
+    .main-container {
+        padding: 24px;
+    }
+
+
+}

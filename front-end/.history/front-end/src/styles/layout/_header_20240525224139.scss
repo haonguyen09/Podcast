@@ -1,0 +1,19 @@
+@use '../abstracts' as abs;
+
+.search {
+    flex: 0 1 360px;
+}
+
+.header-right {
+    gap: 24px;
+
+    & > * {
+        flex-shrink: 0;
+    }
+}
+
+.profile {
+    display: block;
+    @include abs.size(48px);
+    border-radius: 100rem;
+}

@@ -1,0 +1,10 @@
+@use '../../abstracts' as abs;
+
+.episodes {
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+    }
+}

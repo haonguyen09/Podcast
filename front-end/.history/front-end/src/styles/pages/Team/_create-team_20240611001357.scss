@@ -1,0 +1,14 @@
+@use '../../abstracts' as abs;
+
+.createTeam {
+
+    &-heading {
+        @include abs.styleHeading()
+    }
+
+    &-name {
+        h4 {
+            @include abs.styleHeading($fz: 18px);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../../abstracts' as abs;
+
+.playlistShow {
+    &-item {
+        padding: 20px 22px;
+
+        img {
+            @include abs.size(213px, 245px);
+            flex-shrink: 0;
+            border-radius: 12px;
+            margin-right: 20px;
+        }
+    }
+
+    &-itemPodcast {
+        &-info {
+            img {
+                @include abs.size(22px);
+                flex-shrink: 0;
+                border-radius: 100rem;
+                margin-right: 5px;
+            }
+
+            h4 {
+                @include abs.fs(12px);
+                @include abs.fw(440);
+                line-height: 18px;
+            }
+        }
+    }
+}

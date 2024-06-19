@@ -1,0 +1,12 @@
+
+
+.createEpisodes {
+
+    &-heading {
+        @include abs.fs(18px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+}

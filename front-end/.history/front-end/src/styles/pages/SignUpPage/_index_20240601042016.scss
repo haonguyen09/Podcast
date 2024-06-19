@@ -1,0 +1,46 @@
+@use '../../abstracts' as abs;
+
+.signUp {
+    grid-template-columns: repeat(2, 1fr);
+
+    &-logo {
+        margin-top: 70px;
+        display: block;
+    }
+
+    &-text {
+        @include abs.styleHeading($fz: 16px, $fw: 500, $lh: 24px, $color:abs.$gray-1);
+        display: block;
+        margin-block: 20px 16px;
+    }
+
+    &-listImg {
+        img {
+            @include abs.size(40px);
+            border-radius: 100rem;
+            background-color: abs.$pink-color2;
+            border: 2px solid abs.$white-color;
+        }
+        img:not(:first-child) {
+            margin-left: -12px;
+        }
+        margin-block: 20px;
+    }
+
+    h3 {
+        @include abs.styleHeading($fz: 24px);
+        margin-block: 20px;
+    }
+
+    &-listSocial{
+        gap: 10px;
+    }
+
+    &-separate {
+        @include abs.styleText();
+    }
+
+    &-buttonG {
+        padding-block: 13px;
+    }
+}

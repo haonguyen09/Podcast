@@ -1,0 +1,11 @@
+@use '../../abstracts' as abs;
+
+.trendingP {
+
+    &-heading {
+        @include abs.fs(24px);
+        @include abs.fw('bold');
+        line-height: 26px;
+    }
+
+}

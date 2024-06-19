@@ -1,0 +1,16 @@
+@use '../../abstracts' as abs;
+
+.suggest-follow {
+
+    &-header {
+        margin-block: 43px 18px;
+    }
+
+    &-author {
+        img {
+            flex: 0 0 46px;
+            aspect-ratio: 1;
+            @include abs.imgRounded(10px);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use '../../abstracts' as abs;
+
+.yourSub {
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+        --mb: 12px;
+    }
+
+    &-header {
+        span {
+            @include abs.styleText();
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+
+    &-item {
+        padding: 14px;
+    }
+}

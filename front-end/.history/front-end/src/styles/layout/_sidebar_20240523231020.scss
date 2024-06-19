@@ -1,0 +1,15 @@
+@use '../abstracts' as abs;
+
+.sidebar {
+    background-color: abs.$white-color;
+    padding: 48px 30px 0;
+}
+
+.logo {
+    display: block;
+    margin-bottom: 44px;
+}
+
+.menu {
+    border-top: 1px solid abs.$text-gray;
+}

@@ -1,0 +1,23 @@
+@use '../abstracts' as abs;
+
+
+@include abs.screenMinWidth(768px) {
+    .host-item {
+        --gap: 7px;
+        --avatar-size: 64px;
+    }
+}
+
+@include abs.screenMaxWidth(1279.8px) {
+    .main-container {
+        padding: 24px;
+    }
+
+    .home-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}

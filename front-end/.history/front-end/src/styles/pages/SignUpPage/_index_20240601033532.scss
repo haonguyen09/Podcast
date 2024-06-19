@@ -1,0 +1,9 @@
+@use '../../abstracts' as abs;
+
+.signUp {
+    grid-template-columns: repeat(2, 1fr);
+
+    &-text {
+        @include abs.styleHeading($fz: 16px, $fw: 500, $lh: 24px, $color:abs.$gray-3)
+    }
+}

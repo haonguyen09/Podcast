@@ -1,0 +1,17 @@
+.waveform-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .waveform {
+    width: 100px; /* Set the width of the waveform */
+    height: 20px; /* You can adjust the height as needed */
+
+    canvas {
+        height: 20px;
+    }
+  }

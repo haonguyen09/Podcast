@@ -1,0 +1,33 @@
+@use '../abstracts' as abs;
+
+.menu {
+
+    --gap: 26px;
+    &::before {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: abs.$gray-e9;
+        margin-block: var(--gap);
+    }
+
+    &-link {
+        color: abs.$text-gray !important;
+        font-size: 16px !important;
+        line-height: 143%;
+        font-weight: 500 !important;
+        padding: 15px 0px 15px 20px !important;
+        border-radius: 12px;
+
+        &:hover {
+            background: linear-gradient(92.29deg, #415EF4 0.33%, #7141EF 28.14%);
+            color: abs.$white-color !important;
+        }
+    }
+
+    &-icon {
+        margin-right: 10px;
+    }
+
+
+}

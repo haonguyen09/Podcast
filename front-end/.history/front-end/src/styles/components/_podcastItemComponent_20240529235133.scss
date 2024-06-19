@@ -1,0 +1,27 @@
+@use '../abstracts' as abs;
+
+.podcastItem {
+    &-pause, &-play {
+        @include abs.size(46px);
+        margin-right: 10px;
+    } 
+
+    &-info {
+        h3 {
+            @include abs.fs('lg');
+            @include abs.fw('medium');
+            line-height: 24px;
+            color: abs.$text-black1;
+        }
+
+        &-sub {
+            & > * {
+                @include abs.styleText()
+            }
+
+            span:first-child {
+                margin-right: 16px;
+            }
+        }
+    }
+}

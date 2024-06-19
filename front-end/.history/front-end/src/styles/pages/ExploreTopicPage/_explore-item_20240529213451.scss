@@ -1,0 +1,24 @@
+@use '../../abstracts' as abs;
+
+.exploreItem {
+
+    &-header {
+        margin-block: 28px 20px;
+
+        span {
+            @include abs.styleText();
+            margin-bottom: 38px;
+            display: block;
+        }
+    }
+
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 6px;
+    }
+
+
+}

@@ -1,0 +1,18 @@
+@use '../abstracts' as abs;
+
+
+.width-full {
+    width: 100%;
+}
+
+.color-gray {
+    color: abs.$text-gray !important;
+}
+
+.heading {
+    --mb: 0;
+    @include abs.fs('lg');
+    color: abs.$text-black1;
+    @include abs.fw('semibold');
+    margin-bottom: var(--mb);
+}
