@@ -1,6 +1,4 @@
-services:
-  - type: web
-  name: frontend
+- name: frontend
   env: docker
   dockerfilePath: ./front-end/Dockerfile
   context: ./front-end
