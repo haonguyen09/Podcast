@@ -59,7 +59,7 @@ const TrendingEpisdes = () => {
                     listPodcast.map((podcast, index) => (
                         <div className='trendingE-item d-flex align-items-center' key={index}>
                             <div className='trendingE-img'>
-                                <img src={`/uploads/${podcast.image}`} alt='img'/>
+                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} alt='img'/>
                             </div>
                             <div className='trendingE-info text-start'>
                                 <h4>{ podcast.title}</h4>
@@ -69,7 +69,7 @@ const TrendingEpisdes = () => {
                                     <span>{remainingTime(podcast.createdAt)}</span>
                                 </div>
                                 <div className='trendingE-author d-flex align-items-center'>
-                                    <img src={`/uploads/${podcast.userId.avatar}`} alt='avatar' />
+                                    <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.userId.avatar}`} alt='avatar' />
                                     <div className='trendingE-author-info'>
                                         <h5>{ `${podcast.userId.firstName}${podcast.userId.lastName}`}</h5>
                                         <span className='trendingE-author-name'>@{podcast.userId.firstName.toLowerCase()}{podcast.userId.lastName.toLowerCase()}</span>
@@ -77,7 +77,7 @@ const TrendingEpisdes = () => {
                                 </div>
                                 <div className='trendingE-action'>
                                     <div className="audio-wrapper d-flex align-items-center justify-content-between">
-                                        <WaveForm audioUrl={`/uploads/${podcast.audio}`} />
+                                        <WaveForm audioUrl={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.audio}`} />
                                         <div className="trendingE-audio-action d-flex align-items-center ">
                                             <ShareIcon />
                                             <HeartIcon/>

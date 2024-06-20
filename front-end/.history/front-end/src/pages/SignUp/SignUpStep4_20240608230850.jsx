@@ -80,7 +80,7 @@ const SignUpStep4 = (props) => {
                     ) : listUser.map((user, index) => (
                         <div className='signUp-s4-item d-flex align-items-center justify-content-between' key={index}>
                             <div className="signUp-s4-author d-flex align-items-center">
-                                <img src={`/uploads/${user.avatar}`} alt='img' />
+                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${user.avatar}`} alt='img' />
                                 <div class="signUp-s4-info">
                                     <h5>{`${user.firstName} ${user.lastName}`}</h5>
                                     <span style={{textTransform: "lowercase"}}>{`@${user.firstName}${user.lastName}`}</span>

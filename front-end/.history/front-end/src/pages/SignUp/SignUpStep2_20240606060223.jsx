@@ -56,7 +56,7 @@ const SignUpStep2 = (props) => {
                             <div className='signUp-s2-item d-flex justify-content-between align-items-center' key={index}>
                                 <div className='signUp-s2-info'>
                                     <div className="d-flex">
-                                        <img src={`/uploads/${topic.icon}`} />
+                                        <img src={`${process.env.REACT_APP_BACKEND}/uploads/${topic.icon}`} />
                                         <h4>{ topic.name }</h4>
                                     </div>
                                     <span>{`${topic.totalPodcast} Podcasts`}</span>

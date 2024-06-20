@@ -136,7 +136,7 @@ const FeedItemComponent = (props) => {
     return (
         <>
             <div className='feed-item-content d-flex justify-content-between align-items-start'>
-                <img src={data ? `/uploads/${data.image}` : ""} className='feed-podcast-img' />
+                <img src={data ? `${process.env.REACT_APP_BACKEND}/uploads/${data.image}` : ""} className='feed-podcast-img' />
                 <div className='feed-podcast-info'>
                     <div className='feed-podcast-header d-flex justify-content-between align-items-center'>
                         <p>Perspective Podcast (Ep. 1)</p>

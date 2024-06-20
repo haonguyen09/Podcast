@@ -31,10 +31,10 @@ const PodcastTopic = () => {
                     {
                         data.map((item, index) => (
                             <div className='exploreItem-item d-flex align-items-center justify-content-between' key={index}>
-                                <img src={`/uploads/${item.image}`} alt='podcast' />
+                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${item.image}`} alt='podcast' />
                                 <div className='exploreItem-action'>
                                     <PodcastItemComponent
-                                        audioUrl={`/uploads/${item.audio}`}
+                                        audioUrl={`${process.env.REACT_APP_BACKEND}/uploads/${item.audio}`}
                                         classWave='podcastItem-wave' 
                                         data={item}
                                         />

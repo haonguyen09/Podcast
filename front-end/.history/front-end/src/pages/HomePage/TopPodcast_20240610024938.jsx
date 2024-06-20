@@ -45,7 +45,7 @@ const TopPodcast = () => {
             <div className='topPodcast-main d-grid'>
                 {
                     listPodcast.map((podcast, index) => (
-                        <img src={ `/uploads/${podcast.image}` } alt='podcast' key={index}/>
+                        <img src={ `${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}` } alt='podcast' key={index}/>
                     )) 
                 }
             </div>

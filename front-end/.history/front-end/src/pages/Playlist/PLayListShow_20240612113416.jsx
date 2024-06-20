@@ -22,7 +22,7 @@ const PLayListShow = () => {
         </div>
         <div className='playlistShow-list d-grid'>
             <div className='playlistShow-item d-flex align-items-center'>
-                <img src={`/uploads/${data.image}`} alt='img' />
+                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${data.image}`} alt='img' />
                 <div className='playlistShow-info'>
                         <PodcastItemComponent audioUrl={audio} classWave='playlistShow-width' data={ data } />
                         <div className='playlistShow-listPodcast d-grid'>

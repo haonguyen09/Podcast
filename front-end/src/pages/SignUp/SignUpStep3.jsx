@@ -75,7 +75,7 @@ const SignUpStep3 = (props) => {
                         <p>Loading...</p>
                     ) : listPodcast.map((podcast) => (
                     <div className='signUp-s3-item' key={podcast._id}>
-                        <img src={`/uploads/${podcast.image}`} alt='img' />
+                        <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} alt='img' />
                         <PlusIcon
                             className='signUp-s3-item-plus'
                             id={podcast._id}

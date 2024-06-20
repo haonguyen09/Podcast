@@ -51,11 +51,11 @@ const ExploreTopic = () => {
                     {
                         listTopic.map((topic, index) => (
                             <a onClick={() => handleNav(topic)} className='explore-item' key={index}>
-                                <img src={`/uploads/${topic.image}`} alt='topic' className='explore-img'/>
+                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${topic.image}`} alt='topic' className='explore-img'/>
                                 <div className='layer'></div>
                                 <div className="explore-info">
                                     <div className='explore-title d-flex align-items-center'>
-                                        <img src={`/uploads/${topic.icon}`} alt='icon'/>
+                                        <img src={`${process.env.REACT_APP_BACKEND}/uploads/${topic.icon}`} alt='icon'/>
                                         <h4>{topic.name}</h4>
                                     </div>
                                     <span>{`${topic.totalPodcast} podcasts`}</span>

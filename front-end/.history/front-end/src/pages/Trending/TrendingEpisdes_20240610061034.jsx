@@ -76,7 +76,7 @@ const TrendingEpisdes = () => {
                     listPodcast.map((podcast, index) => (
                         <div className='trendingE-item d-flex align-items-center'>
                             <div className='trendingE-img'>
-                                <img src={`/uploads/${podcast.image}`} alt='img'/>
+                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} alt='img'/>
                             </div>
                             <div className='trendingE-info text-start'>
                                 <h4>{ podcast.title}</h4>

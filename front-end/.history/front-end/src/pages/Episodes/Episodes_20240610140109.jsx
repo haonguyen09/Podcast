@@ -58,7 +58,7 @@ const Episodes = () => {
     const data = listPodcast.map(podcast => (
             {
                 id: <input type="checkbox" />,
-                Thumbnail: <img src={`/uploads/${podcast.image}`} className="episodes-img d-flex" alt="Thumbnail" />,
+                Thumbnail: <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} className="episodes-img d-flex" alt="Thumbnail" />,
                 Name: (
                 <>
                     <h3 className="episodes-title text-start">{podcast.title}</h3>

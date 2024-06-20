@@ -53,7 +53,7 @@ const SubcribersPage = () => {
             id: <input type="checkbox" />,
             Name: (
             <div className='d-flex align-items-center'>
-                <img className="subscribers-img" src={`/uploads/${item.avatar}`} alt='img' />
+                <img className="subscribers-img" src={`${process.env.REACT_APP_BACKEND}/uploads/${item.avatar}`} alt='img' />
                 <h3 className="subscribers-title text-start">{`${item.firstName}${item.lastName}`}</h3>
             </div>
             ),

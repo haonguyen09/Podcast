@@ -94,7 +94,7 @@ const Header = () => {
               <Dropdown data-bs-theme="dark">
                   <Dropdown.Toggle id="dropdown-button-dark-example1" className="btn btn-outline-success me-2 btn-login" variant="secondary" style={{ paddingBottom: '12px' }}>
                   <a href='#' className='profile'>
-                    <img src={`/uploads/${userDetails.avatar}`} alt='avatar' />
+                    <img src={`${process.env.REACT_APP_BACKEND}/uploads/${userDetails.avatar}`} alt='avatar' />
                   </a>
                   </Dropdown.Toggle>
 

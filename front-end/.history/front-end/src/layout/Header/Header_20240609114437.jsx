@@ -89,7 +89,7 @@ const Header = () => {
         {
           userDetails?
           (<a href='#' className='profile'>
-            <img src={`/uploads/${userDetails.avatar}`} alt='avatar' />
+            <img src={`${process.env.REACT_APP_BACKEND}/uploads/${userDetails.avatar}`} alt='avatar' />
             </a>) :
           <div className='d-flex justify-content-between align-items-center'>
             <button className='button button--primary' onClick={handleSignUp} style={{marginRight:'15px'}}>Sign Up</button>

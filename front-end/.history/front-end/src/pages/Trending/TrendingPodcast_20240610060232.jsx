@@ -74,7 +74,7 @@ const TrendingPodcast = () => {
                                     </button>
                                 </div>
                                 <div class="trendingP-img">
-                                    <img src={`/uploads/${podcast.image}`} alt='mic' />
+                                    <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} alt='mic' />
                                 </div>
                             </div>
                         )) 

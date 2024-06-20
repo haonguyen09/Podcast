@@ -144,7 +144,7 @@ const TeamDetailsPage = () => {
                             {listMember.map((item, index) => (
                                 <div className="createTeam-item d-flex justify-content-between align-items-center" key={index}>
                                     <div className='createTeam-avatar d-flex align-items-center'>
-                                        <img src={`/uploads/${item.avatar}`} alt="avatar" />
+                                        <img src={`${process.env.REACT_APP_BACKEND}/uploads/${item.avatar}`} alt="avatar" />
                                         <h5>{`${item.firstName} ${item.lastName}`}</h5>
                                     </div>
                                     <button 

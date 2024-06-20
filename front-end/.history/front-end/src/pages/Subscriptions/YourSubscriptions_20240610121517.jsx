@@ -41,7 +41,7 @@ const YourSubscriptions = () => {
                     {
                         listFollowing.map((item, index) => (
                             <div className='yourSub-item d-flex flex-column justify-content-center align-items-center' key={index}>
-                                <img src={`/uploads/${item.avatar}`} alt='avatar' />
+                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${item.avatar}`} alt='avatar' />
                                 <h3>{`${item.firstName} ${item.lastName}`}</h3>
                                 <span>Psychologist (UK)</span>
                             </div>

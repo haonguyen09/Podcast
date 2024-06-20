@@ -33,7 +33,7 @@ const LeaderboardPage = () => {
     const data = listUser.map(item => ({
         id: <MedalIcon/>,
         Name: <div className='d-flex align-items-center'>
-                <img className="leader-img" src={`/uploads/${item.userId.avatar}`} alt='img' />
+                <img className="leader-img" src={`${process.env.REACT_APP_BACKEND}/uploads/${item.userId.avatar}`} alt='img' />
                 <div class="leader-avatar-info  text-start">
                     <h3 className="leader-title">{`${item.userId.firstName}${item.userId.lastName}`}</h3>
                     <span>{item.userId.role}</span>

@@ -36,7 +36,7 @@ const Popular = () => {
                         <li className='host-item' key={index}>
                             <a href="#">
                                 <div className='host-avatar d-flex align-items-end justify-content-center '>
-                                    <img src={`/uploads/${item.avatar}`} alt='avatar'/>
+                                    <img src={`${process.env.REACT_APP_BACKEND}/uploads/${item.avatar}`} alt='avatar'/>
                                 </div>
                                 <span className='host-name'>{`${item.firstName} ${item.lastName}`}</span>
                             </a>

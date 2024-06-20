@@ -58,11 +58,11 @@ const Topics = () => {
                     listTopic.map((topic, index) => (
                         <div className="topics-item">
                             <div className='topics-img'>
-                                <img src={`/uploads/${topic.image}`} />
+                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${topic.image}`} />
                                 <div className='layer'></div>
                                 <div className='topics-info text-start'>
                                     <div className='topics-name d-flex align-items-center justify-content-start'>
-                                        <img src={ `/uploads/${topic.icon}` } />
+                                        <img src={ `${process.env.REACT_APP_BACKEND}/uploads/${topic.icon}` } />
                                         <span>{ topic.name }</span>
                                     </div>
                                     <span>{ `${topic.totalPodcast} podcasts` }</span>

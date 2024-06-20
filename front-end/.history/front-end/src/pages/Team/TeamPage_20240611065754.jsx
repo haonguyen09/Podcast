@@ -61,7 +61,7 @@ const TeamPage = () => {
                             <div className='team-member d-flex'>
                                 {
                                     team.members.map(member => (
-                                        <img src={`/uploads/${member.avatar}`}/>
+                                        <img src={`${process.env.REACT_APP_BACKEND}/uploads/${member.avatar}`}/>
                                     ))
                                 }
                                 

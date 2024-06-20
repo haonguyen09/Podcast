@@ -100,7 +100,7 @@ const Header = () => {
               <Dropdown>
                   <Dropdown.Toggle>
                   <a  className='profile'>
-                    <img src={`/uploads/${userDetails.avatar}`} alt='avatar' />
+                    <img src={`${process.env.REACT_APP_BACKEND}/uploads/${userDetails.avatar}`} alt='avatar' />
                   </a>
                   </Dropdown.Toggle>
 

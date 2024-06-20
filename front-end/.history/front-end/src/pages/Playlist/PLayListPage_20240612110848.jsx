@@ -50,7 +50,7 @@ const PLayListPage = () => {
                                     <div className='playlist-podcast d-flex align-items-center'>
                                         {
                                             playlist.podcasts.map(podcast => (
-                                                <img src={`/uploads/${podcast.image}`} alt='img' />
+                                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} alt='img' />
                                             ))
                                         }
                                         <span>{`+${playlist.podcasts.length}`}</span>

@@ -53,7 +53,7 @@ const SortPodcast = () => {
                 {
                     listPodcast.map((podcast, index) => (
                         <div className='sortP-item d-flex align-items-center'>
-                            <img src={`/uploads/${podcast.image}`} alt='podcast' />
+                            <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} alt='podcast' />
                             <div className='sortP-info text-start'>
                                 <h4>{podcast.title}</h4>
                                 <span>{ remainingTime(podcast.createdAt)}</span>

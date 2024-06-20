@@ -72,7 +72,7 @@ const Feed = () => {
                             <div className='feed-item-header d-flex justify-content-between align-items-center'>
                                 <div className='feed-author d-flex justify-content-center align-items-center'>
                                     <div className='feed-author-avatar'>
-                                        <img src={ `/uploads/${podcast.userId.avatar}` } alt='avatar' />
+                                        <img src={ `${process.env.REACT_APP_BACKEND}/uploads/${podcast.userId.avatar}` } alt='avatar' />
                                         <CheckIcon className='feed-author-verify'/>
                                     </div>
                                     <div className='feed-author-content'>

@@ -70,7 +70,7 @@ const SuggestFollow = () => {
                         <li key={user._id} className='suggest-follow-item'>
                             <a href='#' className='d-flex justify-content-between align-items-center'>
                                 <div className='suggest-follow-author d-flex'>
-                                    <img src={user.avatar ? `/uploads/${user.avatar}` : avatar} />
+                                    <img src={user.avatar ? `${process.env.REACT_APP_BACKEND}/uploads/${user.avatar}` : avatar} />
                                     <div className='suggest-follow-author-info'>
                                         <h3>{user.firstName} {user.lastName}</h3>
                                         <span>@{user.firstName.toLowerCase()}{user.lastName.toLowerCase()}</span>

@@ -39,7 +39,7 @@ const PLayListPage = () => {
                 {
                     playlists.map((playlist, index) => (
                         <div className='playlist-item d-flex align-items-center' onClick={handleNavi} key={index}>
-                            <img src={`/uploads/${playlist.image}`} alt='img' />
+                            <img src={`${process.env.REACT_APP_BACKEND}/uploads/${playlist.image}`} alt='img' />
                             <div className='playlist-info'>
                                 <div className='playlist-info-header d-flex justify-content-between align-items-center'>
                                     <h3>{playlist.title}</h3>
@@ -50,7 +50,7 @@ const PLayListPage = () => {
                                     <div className='playlist-podcast d-flex align-items-center'>
                                         {
                                             playlist.podcasts.map(podcast => (
-                                                <img src={`/uploads/${podcast.image}`} alt='img' />
+                                                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${podcast.image}`} alt='img' />
                                             ))
                                         }
                                         <span>{`+${playlist.podcasts.length}`}</span>

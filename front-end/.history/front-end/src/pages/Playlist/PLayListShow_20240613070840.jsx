@@ -49,15 +49,15 @@ const PLayListShow = () => {
         </div>
         <div className='playlistShow-list d-grid'>
             <div className='playlistShow-item d-flex align-items-center'>
-                <img src={`/uploads/${data[currentAudioIndex].image}`} alt='img' />
+                <img src={`${process.env.REACT_APP_BACKEND}/uploads/${data[currentAudioIndex].image}`} alt='img' />
                 <div className='playlistShow-info'>
-                        <PodcastItemComponent audioUrl={`/uploads/${data[currentAudioIndex].audio}`} classWave='playlistShow-width' data={ data[currentAudioIndex] } />
+                        <PodcastItemComponent audioUrl={`${process.env.REACT_APP_BACKEND}/uploads/${data[currentAudioIndex].audio}`} classWave='playlistShow-width' data={ data[currentAudioIndex] } />
                         <div className='playlistShow-listPodcast d-grid'>
                             {
                                 data.map((item, index) => (
                                     <div className='playlistShow-itemPodcast d-flex align-items-center justify-content-between' key={index} onClick={() => handleAudioItemClick(index)}>
                                         <div className='playlistShow-itemPodcast-info d-flex align-items-center'>
-                                            <img src={`/uploads/${item.image}`} alt='img' />
+                                            <img src={`${process.env.REACT_APP_BACKEND}/uploads/${item.image}`} alt='img' />
                                             <h4>{item.title}</h4>
                                         </div>
                                         <div className='d-flex align-items-center'>
@@ -79,7 +79,7 @@ const PLayListShow = () => {
                 </div>
             </div>
             </div>
-            <audio ref={audioRef} src={`/uploads/${data[currentAudioIndex].audio}`} onEnded={handleAudioEnded} />
+            <audio ref={audioRef} src={`${process.env.REACT_APP_BACKEND}/uploads/${data[currentAudioIndex].audio}`} onEnded={handleAudioEnded} />
     </div>
     )
 }
