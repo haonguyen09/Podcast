@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: frontend
+    env: docker
+    plan: free   # Ensure this is within the free tier
+    dockerfilePath: ./front-end/Dockerfile
+    buildCommand: docker build -t frontend .
+    envVars:
+      - key: REACT_APP_API
+        value: http://localhost:3005/api
+
+  - type: web
+    name: backend
+    env: docker
+    plan: free   # Ensure this is within the free tier
+    dockerfilePath: ./backend/Dockerfile
+    buildCommand: docker build -t backend .
+    envVars:
+      - key: PORT
+        value: 3005
+      - key: MONGO_DB
+        value: ${MONGO_DB}
+      - key: ACCESS_TOKEN
+        value: ${ACCESS_TOKEN}
+      - key: REFRESH_TOKEN
+        value: ${REFRESH_TOKEN}

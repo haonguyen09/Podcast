@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: frontend
+    env: docker
+    dockerfile: ./front-end/Dockerfile
+    envVars:
+      - key: REACT_APP_API
+        value: http://localhost:3005/api
+    port:
+      containerPort: 3000
+    buildCommand: yarn build
+    startCommand: yarn start
+
+  - type: web
+    name: backend
+    env: docker
+    dockerfile: ./backend/Dockerfile
+    envVars:
+      - key: PORT
+        value: 3005
+      - key: MONGO_DB
+        value: mongodb+srv://username:password@cluster0.mongodb.net/PodcastDB?retryWrites=true&w=majority&appName=Cluster0
+      - key: ACCESS_TOKEN
+        value: access_token
+      - key: REFRESH_TOKEN
+        value: refresh_token
+    port:
+      containerPort: 3005
+    volumeMounts:
+      - name: backend-uploads
+        mountPath: /app/uploads
+    buildCommand: npm install
+    startCommand: npm start
+
+volumes:
+  - name: backend-uploads
+    type: persistent
