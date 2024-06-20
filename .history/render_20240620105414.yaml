@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: frontend
+    env: docker
+    dockerfilePath: ./front-end/Dockerfile
+    buildCommand: docker build -t frontend .
+    startCommand: npm start
+    envVars:
+      - key: REACT_APP_API
+        value: http://localhost:3005/api
+    ports:
+      - 3000
+
+  - type: web
+    name: backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    buildCommand: docker build -t backend .
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3005
+      - key: MONGO_DB
+        value: ${MONGO_DB}
+      - key: ACCESS_TOKEN
+        value: ${ACCESS_TOKEN}
+      - key: REFRESH_TOKEN
+        value: ${REFRESH_TOKEN}
+    ports:
+      - 3005
+    volumes:
+      - name: backend-uploads
+        path: /app/uploads
+
+volumes:
+  - name: backend-uploads
