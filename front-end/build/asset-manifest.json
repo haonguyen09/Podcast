@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7dfa0593.css",
-    "main.js": "/static/js/main.5078789f.js",
+    "main.css": "/static/css/main.7ced7dfb.css",
+    "main.js": "/static/js/main.ad150b90.js",
     "static/js/453.9537af23.chunk.js": "/static/js/453.9537af23.chunk.js",
     "static/media/Podcast English - Luyện Nghe Tiếng Anh Mỗi Ngày - No.49.mp4": "/static/media/Podcast English - Luyện Nghe Tiếng Anh Mỗi Ngày - No.49.be7b7eb06475cd15cf64.mp4",
     "static/media/ImageMic.png": "/static/media/ImageMic.7cc9c3461621ab7555f0.png",
@@ -16,12 +16,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.7dfa0593.css.map": "/static/css/main.7dfa0593.css.map",
-    "main.5078789f.js.map": "/static/js/main.5078789f.js.map",
+    "main.7ced7dfb.css.map": "/static/css/main.7ced7dfb.css.map",
+    "main.ad150b90.js.map": "/static/js/main.ad150b90.js.map",
     "453.9537af23.chunk.js.map": "/static/js/453.9537af23.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7dfa0593.css",
-    "static/js/main.5078789f.js"
+    "static/css/main.7ced7dfb.css",
+    "static/js/main.ad150b90.js"
   ]
 }
