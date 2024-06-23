@@ -114,6 +114,7 @@
 
         &-img3 {
             background-color: abs.$primary-color;
+            
             margin-top: 18px;
         }
 
@@ -124,10 +125,8 @@
 
         &-img6 {
             position: absolute;
-            bottom: -18px;
-            right: 0;
-            left: 0;
-            margin: 0 auto;
+            bottom: 33%;
+            right: 29%;
         }
 
         &-img4 {

@@ -204,7 +204,7 @@ const SignInPage = () => {
                         <img src={img1} alt='avatar' />
                     </div>
                     <img src={img2} alt='avatar' className='signUp-right-img2' />
-                    <div className='d-flex justify-content-end signUp-right-wrapper3'>
+                    <div className='d-flex justify-content-end'>
                         <img src={img3} alt='avatar' className='signUp-right-img3 d-flex justify-content-end'/>
                         <img src={img6} alt='avatar' className='signUp-right-img6'/>
                     </div>
