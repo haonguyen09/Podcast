@@ -6,7 +6,7 @@ const dotenv = require('dotenv')
 const routes = require('./routes')
 const cors = require('cors')
 const path = require("path");
-const Podcast = require("./model/PodcastModel")
+const PodcastModel = require("./model/PodcastModel")
 
 dotenv.config()
 
@@ -23,13 +23,13 @@ routes(app)
 const port = process.env.PORT || 3005
 
 mongoose.connect(`${ process.env.MONGO_DB }`, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => { console.log('Connected database!'); preloadData(); })
+    .then(() => console.log('Connected database!'))
     .catch((e) => console.log('Not connect database', e))
 
 
 const preloadData = async () => {
     try {
-        const data = await Podcast.find(); 
+        const data = await PodcastModel.find(); 
         app.locals.preloadedData = data; 
     } catch (error) {
         console.error('Error preloading data:', error);

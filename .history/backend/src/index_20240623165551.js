@@ -23,7 +23,7 @@ routes(app)
 const port = process.env.PORT || 3005
 
 mongoose.connect(`${ process.env.MONGO_DB }`, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => { console.log('Connected database!'); preloadData(); })
+    .then(() => console.log('Connected database!'))
     .catch((e) => console.log('Not connect database', e))
 
 
